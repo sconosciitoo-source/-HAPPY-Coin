@@ -874,5 +874,33 @@ right:auto;
 width:100%;
 text-align:center;
 }
+/* ===========================
+   WEB3 BUTTONS
+=========================== */
+
+
+button{
+font-family:inherit;
+cursor:pointer;
+border:none;
+}
+
+
+#connectWallet{
+font-size:16px;
+}
+
+
+.walletConnected{
+
+background:
+linear-gradient(
+45deg,
+#00ff99,
+#00cc66
+)!important;
+
+box-shadow:
+0 0 40px rgba(0,255,150,.5)!important;
 
 }
