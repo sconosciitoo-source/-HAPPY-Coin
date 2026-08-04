@@ -142,12 +142,12 @@ BUY NOW
 <div class="social">
 <p>
 <a href="#">
-Telegram
+Telegram https://t.me/strongestcpmmunity
 </a>
 </p>
 <p>
 <a href="#">
-X / Twitter
+X / Twitter https://x.com/happycoinso?s=11
 </a>
 </p>
 </div>
