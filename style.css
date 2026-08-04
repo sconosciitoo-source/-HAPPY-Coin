@@ -419,5 +419,460 @@ margin-bottom:60px;
 text-shadow:
 
 0 0 15px rgba(255,213,74,.5);
+/* ===========================
+   $HAPPY OFFICIAL WEBSITE
+   PART 2
+=========================== */
+
+
+/* ===========================
+   GLASS CARDS
+=========================== */
+
+.glass{
+background:
+rgba(255,255,255,.06);
+border:1px solid rgba(255,213,74,.15);
+backdrop-filter:blur(20px);
+border-radius:25px;
+padding:40px;
+box-shadow:
+0 20px 50px rgba(0,0,0,.5),
+inset 0 0 30px rgba(255,213,74,.05);
+transition:.5s;
+}
+
+.glass:hover{
+transform:translateY(-10px);
+border-color:rgba(255,213,74,.5);
+box-shadow:
+0 30px 80px rgba(0,0,0,.7),
+0 0 40px rgba(255,213,74,.25);
+}
+
+
+/* ===========================
+   LORE SECTION
+=========================== */
+
+.lore{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.loreImage{
+width:100%;
+border-radius:30px;
+overflow:hidden;
+box-shadow:
+0 0 60px rgba(255,213,74,.2);
+}
+
+.loreImage img{
+width:100%;
+display:block;
+transition:.6s;
+}
+
+.loreImage:hover img{
+transform:scale(1.08);
+}
+
+.loreText h3{
+font-size:42px;
+margin-bottom:25px;
+color:var(--gold);
+}
+
+.loreText p{
+font-size:20px;
+line-height:1.8;
+color:#ddd;
+}
+
+
+/* ===========================
+   FEATURE CARDS
+=========================== */
+
+.features{
+display:grid;
+grid-template-columns:
+repeat(3,1fr);
+gap:35px;
+}
+
+.featureCard{
+background:
+linear-gradient(
+145deg,
+rgba(255,255,255,.08),
+rgba(255,255,255,.02)
+);
+border-radius:30px;
+padding:45px 35px;
+border:1px solid rgba(255,213,74,.15);
+transition:.5s;
+position:relative;
+overflow:hidden;
+}
+
+.featureCard::before{
+content:"";
+position:absolute;
+width:150px;
+height:150px;
+background:var(--gold);
+filter:blur(80px);
+opacity:.15;
+top:-50px;
+right:-50px;
+}
+
+.featureCard:hover{
+transform:
+translateY(-15px)
+scale(1.03);
+border-color:var(--gold);
+}
+
+.featureIcon{
+font-size:55px;
+margin-bottom:25px;
+}
+
+.featureCard h3{
+font-size:28px;
+margin-bottom:15px;
+color:var(--gold);
+}
+
+.featureCard p{
+color:#ccc;
+line-height:1.7;
+font-size:17px;
+}
+
+
+/* ===========================
+   TOKENOMICS
+=========================== */
+
+.tokenGrid{
+display:grid;
+grid-template-columns:
+repeat(4,1fr);
+gap:30px;
+}
+
+.tokenBox{
+text-align:center;
+padding:40px 20px;
+border-radius:25px;
+background:
+rgba(255,255,255,.05);
+border:
+1px solid rgba(255,213,74,.2);
+transition:.4s;
+}
+
+.tokenBox:hover{
+transform:translateY(-12px);
+box-shadow:
+0 0 40px rgba(255,213,74,.25);
+}
+
+.tokenBox h3{
+font-size:40px;
+color:var(--gold);
+margin-bottom:15px;
+}
+
+.tokenBox span{
+color:#aaa;
+font-size:18px;
+}
+
+
+/* ===========================
+   TOKEN BAR
+=========================== */
+
+.tokenBar{
+width:100%;
+height:18px;
+background:#222;
+border-radius:30px;
+overflow:hidden;
+margin-top:40px;
+}
+
+.tokenProgress{
+height:100%;
+width:75%;
+background:
+linear-gradient(
+90deg,
+var(--gold),
+var(--gold2)
+);
+box-shadow:
+0 0 30px var(--gold);
+animation:
+progress 3s ease;
+}
+
+@keyframes progress{
+
+from{
+width:0;
+}
+
+to{
+width:75%;
+}
+
+}
+
+
+/* ===========================
+   ROADMAP
+=========================== */
+
+.roadmap{
+position:relative;
+max-width:1000px;
+margin:auto;
+}
+
+.roadmap::before{
+content:"";
+position:absolute;
+width:3px;
+height:100%;
+background:
+linear-gradient(
+var(--gold),
+transparent
+);
+left:50%;
+top:0;
+transform:translateX(-50%);
+}
+
+.phase{
+width:50%;
+padding:30px 50px;
+position:relative;
+}
+
+.phase:nth-child(odd){
+left:0;
+text-align:right;
+}
+
+.phase:nth-child(even){
+left:50%;
+}
+
+.phase::after{
+content:"";
+position:absolute;
+top:45px;
+width:20px;
+height:20px;
+background:var(--gold);
+border-radius:50%;
+box-shadow:
+0 0 30px var(--gold);
+}
+
+.phase:nth-child(odd)::after{
+right:-10px;
+}
+
+.phase:nth-child(even)::after{
+left:-10px;
+}
+
+.phase h3{
+font-size:30px;
+color:var(--gold);
+margin-bottom:15px;
+}
+
+.phase p{
+color:#ccc;
+font-size:18px;
+line-height:1.6;
+}
+
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+padding:80px 10%;
+background:#030303;
+border-top:
+1px solid rgba(255,213,74,.15);
+text-align:center;
+}
+
+footer .logo{
+margin-bottom:25px;
+display:block;
+}
+
+footer p{
+color:#888;
+font-size:16px;
+}
+
+.socials{
+margin-top:30px;
+display:flex;
+justify-content:center;
+gap:25px;
+}
+
+.socials a{
+width:50px;
+height:50px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+border:
+1px solid var(--gold);
+color:white;
+text-decoration:none;
+transition:.4s;
+}
+
+.socials a:hover{
+background:var(--gold);
+color:black;
+transform:translateY(-5px);
+}
+
+
+/* ===========================
+   SCROLL ANIMATION
+=========================== */
+
+.reveal{
+opacity:0;
+transform:
+translateY(60px);
+transition:
+1s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:
+translateY(0);
+}
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+
+@media(max-width:1100px){
+
+.heroContent h1{
+font-size:80px;
+}
+
+.features{
+grid-template-columns:
+repeat(2,1fr);
+}
+
+.tokenGrid{
+grid-template-columns:
+repeat(2,1fr);
+}
+
+.lore{
+grid-template-columns:1fr;
+}
+
+}
+
+
+@media(max-width:700px){
+
+nav{
+height:70px;
+padding:0 5%;
+}
+
+nav ul{
+display:none;
+}
+
+.logo{
+font-size:24px;
+}
+
+.heroContent h1{
+font-size:55px;
+}
+
+.heroContent h2{
+font-size:28px;
+}
+
+.heroContent p{
+font-size:18px;
+}
+
+section{
+padding:80px 5%;
+}
+
+section h2{
+font-size:42px;
+}
+
+.features,
+.tokenGrid{
+grid-template-columns:1fr;
+}
+
+
+.roadmap::before{
+left:20px;
+}
+
+.phase,
+.phase:nth-child(even),
+.phase:nth-child(odd){
+width:100%;
+left:0;
+padding-left:70px;
+text-align:left;
+}
+
+.phase::after,
+.phase:nth-child(odd)::after,
+.phase:nth-child(even)::after{
+left:10px;
+right:auto;
+}
+
+
+.goldButton,
+.darkButton{
+width:100%;
+text-align:center;
+}
 
 }
