@@ -571,5 +571,201 @@ document.body.style.opacity =
 document.body.style.transition =
 "opacity 1.5s ease";
 
+/* ===========================
+   WEB3 WALLET CONNECTION
+=========================== */
+
+
+const connectButton =
+document.getElementById(
+"connectWallet"
+);
+
+
+let walletAddress = null;
+
+
+
+async function connectWallet(){
+
+
+if(!window.ethereum){
+
+alert(
+"No Web3 wallet detected. Install MetaMask."
+);
+
+return;
+
+}
+
+
+
+try{
+
+
+const accounts =
+await window.ethereum.request({
+
+method:
+"eth_requestAccounts"
 
 });
+
+
+walletAddress =
+accounts[0];
+
+
+updateWalletButton();
+
+
+}
+
+
+catch(error){
+
+console.log(error);
+
+}
+
+
+
+}
+
+
+
+function updateWalletButton(){
+
+
+if(!walletAddress)
+return;
+
+
+
+let shortAddress =
+walletAddress.substring(0,6)
++
+"..."
++
+walletAddress.substring(
+walletAddress.length-4
+);
+
+
+
+connectButton.innerHTML =
+shortAddress;
+
+
+connectButton.classList.add(
+"walletConnected"
+);
+
+
+}
+
+
+
+if(connectButton){
+
+
+connectButton.addEventListener(
+"click",
+connectWallet
+);
+
+
+}
+
+
+
+/* ===========================
+   BUY TOKEN BUTTON
+=========================== */
+
+
+const buyButton =
+document.getElementById(
+"buyToken"
+);
+
+
+
+if(buyButton){
+
+
+buyButton.addEventListener(
+"click",
+()=>{
+
+
+/*
+INSERIRE QUI IL LINK DEX
+ESEMPIO:
+Uniswap / PancakeSwap
+*/
+
+
+const dexURL =
+"https://app.uniswap.org/";
+
+
+
+window.open(
+dexURL,
+"_blank"
+);
+
+
+
+});
+
+
+}
+
+
+
+
+
+/* ===========================
+   WALLET ACCOUNT CHANGE
+=========================== */
+
+
+if(window.ethereum){
+
+
+window.ethereum.on(
+"accountsChanged",
+(accounts)=>{
+
+
+if(accounts.length===0){
+
+walletAddress=null;
+
+connectButton.innerHTML =
+"CONNECT WALLET";
+
+connectButton.classList.remove(
+"walletConnected"
+);
+
+
+}else{
+
+
+walletAddress =
+accounts[0];
+
+
+updateWalletButton();
+
+
+}
+
+
+});
+
+
