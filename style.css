@@ -904,3 +904,31 @@ box-shadow:
 0 0 40px rgba(0,255,150,.5)!important;
 
 }
+/* ===========================
+   GOLD TEXT THEME
+=========================== */
+
+h1,
+h2,
+h3{
+color:var(--gold);
+}
+
+
+.goldText{
+
+background:
+linear-gradient(
+90deg,
+#FFD54A,
+#ffb300,
+#FFD54A
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+text-shadow:
+0 0 30px rgba(255,213,74,.5);
+
+}
